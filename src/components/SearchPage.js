@@ -42,21 +42,21 @@ const SearchPage = (props) => {
         title: "Falsche Daten",
         message: "Bitte geben Sie einen passenden Start- und Zielort ein!",
       });
-      return (errorOccured = true);  
+      return (errorOccured = true);
     }
     if (departureTime === "" || departureDay === "") {
       setError({
         title: "Falsche Daten",
         message: "Bitte geben Sie einen Abfahrtstag und eine Abfahrtszeit an!",
       });
-      return (errorOccured = true); 
+      return (errorOccured = true);
     }
-    if(departureStop === destinationStop){
+    if (departureStop === destinationStop) {
       setError({
         title: "Falsche Daten",
         message: "Start- und Zielort dürfen nicht identisch sein!",
       });
-      return (errorOccured = true); 
+      return (errorOccured = true);
     }
   };
 
@@ -103,13 +103,13 @@ const SearchPage = (props) => {
     setDepartureTime(event.target.value);
   };
 
-   // ------------------------------- FÜR DIE VERZÖGERUNG---------------------------------------------------------------
-//  useEffect(() => {
-//   const timer = setTimeout(() => {
-//  setloadingMessage(false);
-//   }, 1000);
-//   return () => clearTimeout(timer);
-// }, []);
+  // ------------------------------- FÜR DIE VERZÖGERUNG---------------------------------------------------------------
+  //  useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //  setloadingMessage(false);
+  //   }, 1000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <React.Fragment>
@@ -159,8 +159,8 @@ const SearchPage = (props) => {
         </div>
       )}
       <div>
-        {searchClicked ? ( 
-          // (loadingMessage? <p>...loading...</p> : 
+        {searchClicked ? (
+          // (loadingMessage? <p>...loading...</p> :
           <ConnectionDisplay
             onSetStartFormHidden={props.onSetStartFormHidden}
             onGoBack={() => {
@@ -171,9 +171,9 @@ const SearchPage = (props) => {
             destinationStop={destinationStop}
             departureDay={departureDay}
             departureTime={departureTime}
-            durationH = {0}
-            durationMin = {42}
-            additionalRandomMinutes= {3}
+            durationH={0}
+            durationMin={42}
+            additionalRandomMinutes={3}
           />
         ) : (
           <div className="buttons-search-page">
@@ -241,4 +241,3 @@ const SearchPage = (props) => {
 };
 
 export default SearchPage;
-
