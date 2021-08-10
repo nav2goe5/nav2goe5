@@ -23,8 +23,8 @@ const End = (props) => {
           </div>
         </header>
         <div id="containerButtonEnd">
-          <a href="https://www.nav2goeKatha2.github.io">
-            App-Version 2 starten
+          <a href="https://www.survio.com/survey/d/F9A7E9J9M9I6R5L9O">
+            Umfrage starten
           </a>
           {/* <a href="https://morza95.github.io">
             App-Version 2 starten
